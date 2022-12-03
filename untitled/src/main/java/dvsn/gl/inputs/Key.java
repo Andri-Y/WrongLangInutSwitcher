@@ -1,6 +1,7 @@
-package dvsn.gl;
+package dvsn.gl.inputs;
 
 public class Key {
+    private String rawInput;
     private String type;
     private int code;
     private String text;
@@ -9,9 +10,24 @@ public class Key {
 
     public Key() {
     }
-
     public Key(String rawInput) {
-        parseParams(rawInput);
+        this.setRawInput(rawInput);
+    }
+
+    public Key(String type, int code, String text, String location, int rawCode) {
+        this.type = type;
+        this.code = code;
+        this.text = text;
+        this.location = location;
+        this.rawCode = rawCode;
+    }
+
+    public String getRawInput() {
+        return rawInput;
+    }
+
+    public void setRawInput(String rawInput) {
+        this.rawInput = rawInput;
     }
 
     public String getType() {
@@ -54,8 +70,7 @@ public class Key {
         this.rawCode = rawCode;
     }
 
-    private Key parseParams(String rawInput) {
+    public void setKeyProperties() {
 
-        return new Key(rawInput);
     }
 }
