@@ -1,6 +1,6 @@
 package dvsn.gl.system.io;
 
-class Log {
+class Log implements LogCreator {
     private static final Log instance;
 
     static {

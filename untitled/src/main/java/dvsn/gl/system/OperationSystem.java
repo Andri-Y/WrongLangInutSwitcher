@@ -1,9 +1,11 @@
-package dvsn.gl.system.info;
+package dvsn.gl.system;
 
 import dvsn.gl.system.io.FileSystem;
 
-public class OperationSystem {
+public class OperationSystem implements OperationSystemSelector {
     private static final OperationSystem instance;
+    private static String OS_TYPE;
+    private static FileSystem fileSystem;
 
     static {
         try {
@@ -19,11 +21,6 @@ public class OperationSystem {
     public static OperationSystem getInstance() {
         return instance;
     }
-
-    private static String OS_TYPE;
-
-    private static FileSystem fileSystem;
-
 
     public static String getOsType() {
         return OS_TYPE;

@@ -1,7 +1,8 @@
 package dvsn.gl.system.io;
 
-public class FileSystem extends AbstractFileSystem {
+public class FileSystem implements FileSystemCreator {
 
+    public static final Log LOG = Log.getInstance();
     private static final FileSystem instance;
 
     static {
@@ -18,7 +19,5 @@ public class FileSystem extends AbstractFileSystem {
     public static FileSystem getInstance() {
         return instance;
     }
-
-    public static final Log LOG = Log.getInstance();
 
 }

@@ -2,7 +2,7 @@ package dvsn.gl;
 
 import com.github.kwhat.jnativehook.GlobalScreen;
 import com.github.kwhat.jnativehook.NativeHookException;
-import dvsn.gl.system.info.OperationSystem;
+import dvsn.gl.system.OperationSystem;
 import dvsn.gl.system.listeners.keyboard.GlobalKeyListener;
 
 public class Main {
