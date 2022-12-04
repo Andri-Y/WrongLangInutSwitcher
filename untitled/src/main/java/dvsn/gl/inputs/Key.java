@@ -10,6 +10,7 @@ public class Key {
 
     public Key() {
     }
+
     public Key(String rawInput) {
         this.setRawInput(rawInput);
     }
